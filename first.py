@@ -1,3 +1,4 @@
+import nester
 movies = ["The Holy Grail",1975,
 "Terry Jones & Terry Gilliam",91,
 ["Graham Chapman",["Michael Palin","John Cleese","Terry Gilliam","Eric Idle","Terry Jones"]]]
@@ -22,16 +23,14 @@ print("****************************************************************")
 #     |                  |
 #     --------------------
 #------------------------------------------------
-
-def print_lol(the_list):
-    for each_list in the_list:
-        if isinstance(each_list,list):
-            print("----------------------------------------------------------------")
-            print_lol(each_list)
-        else:
-            print(each_list)
-
-print_lol(movies)
+# def print_lol(the_list):
+#     for each_list in the_list:
+#         if isinstance(each_list,list):
+#             print("----------------------------------------------------------------")
+#             print_lol(each_list)
+#         else:
+#             print(each_list)\
+nester.print_lol(movies)
 
 #-----PDF_page 60/book_page 33
 
