@@ -3,16 +3,16 @@ movies = ["The Holy Grail",1975,
 "Terry Jones & Terry Gilliam",91,
 ["Graham Chapman",["Michael Palin","John Cleese","Terry Gilliam","Eric Idle","Terry Jones"]]]
 print(movies)
-print("----------------------------------------------------------------")
-for each_movie in movies:
-    if isinstance(each_movie,list):
-        for each_sub_movie in each_movie:
-            print(each_sub_movie)
-    else:
-        print(each_movie)
-print("----------------------------------------------------------------")
+# print("----------------------------------------------------------------")
+# for each_movie in movies:
+#     if isinstance(each_movie,list):
+#         for each_sub_movie in each_movie:
+#             print(each_sub_movie)
+#     else:
+#         print(each_movie)
+# print("----------------------------------------------------------------")
 
-print("****************************************************************")
+# print("****************************************************************")
 #------------------------------------------------
 #function
 #use def 為函數提供一個函數名
@@ -30,7 +30,8 @@ print("****************************************************************")
 #             print_lol(each_list)
 #         else:
 #             print(each_list)\
-nester.print_lol(movies)
+nester.print_lol(movies,1)
 
 #-----PDF_page 60/book_page 33
+
 
