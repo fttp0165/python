@@ -2,10 +2,30 @@ import os
 #read current file
 file_loc='/Users/linzongqing/Python/python'
 location=os.getcwd()
-if location==file_loc:
-    print('True')
-else:
-    print('False')
-#the_file=open('sketch.txt')
+file_contant=os.listdir(path='.')
+
+# for file_item in file_contant:
+#     if file_item == "sketch.txt":
+#         print("file exist")
+
+def checkFile(file_path,file):
+    file_contant = os.listdir(path=file_path)
+    File_exist=False
+    for file_item in file_contant:
+        if file_item == file:
+            File_exist=True
+    return File_exist
+file_exist=checkFile('.', "sketch.txt")
+print(file_exist)
+if file_exist:
+    the_file=open('sketch.txt')
+    print(the_file.readline(), end='')
+    the_file.close()
+
+
+
+
+
+
 
 
