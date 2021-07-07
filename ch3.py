@@ -19,9 +19,15 @@ file_exist=checkFile('.', "sketch.txt")
 print(file_exist)
 if file_exist:
     the_file=open('sketch.txt')
-    print(the_file.readline(), end='')
+    for each_line in the_file:
+        #print(the_file.readline(), end='')
+        if not each_line.find(':') == -1:
+            (role,line_spoken)=each_line.split(':',1)
+            print(role,end='')
+            print(' said:', end='')
+            print(line_spoken, end='')
+    the_file.seek(0)
     the_file.close()
-
 
 
 
