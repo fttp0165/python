@@ -3,10 +3,14 @@ import os
 file_loc='/Users/linzongqing/Python/python'
 location=os.getcwd()
 file_contant=os.listdir(path='.')
-
 # for file_item in file_contant:
 #     if file_item == "sketch.txt":
 #         print("file exist")
+
+if os.path.exists('sketch.txt'):
+    print('sketch.txt exists')
+else:
+    print("sketch.txt doesn't exists")
 
 def checkFile(file_path,file):
     file_contant = os.listdir(path=file_path)
@@ -17,7 +21,8 @@ def checkFile(file_path,file):
     return File_exist
 file_exist=checkFile('.', "sketch.txt")
 print(file_exist)
-if file_exist:
+# if file_exist:
+try:
     the_file=open('sketch.txt')
     for each_line in the_file:
         #print(the_file.readline(), end='')
@@ -27,10 +32,12 @@ if file_exist:
             print(role,end='')
             print(' said:', end='')
             print(line_spoken, end='')
-        except:
+        except ValueError:
             pass
     the_file.seek(0)
     the_file.close()
+except IOError:
+    print("The data file is missing!")
 
 
 
