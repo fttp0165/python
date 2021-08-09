@@ -6,7 +6,7 @@ unit=input()
 
 if unit == "in":
     result = float(len)*2.54
-    print(len +"in equal "+ str(result) + "cm" )
+    print(len +" in equal "+ str(result) + "cm" )
 else:
     result = float(len) / 2.54
-    print(len + "cm equal " + str(result) + "in")
+    print(len + " cm equal " + str(result) + "in")
